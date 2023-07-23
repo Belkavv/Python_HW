@@ -60,6 +60,17 @@
 
 # Task4. Посчитать сумму цифр любого целого или вещественного числа. Через строку решать нельзя.
 
+# num = float(input("Введите число: "))
+#
+# integer = round(num, 3) * 1000
+# sum = 0
+#
+# while integer != 0:
+#     digit = integer % 10
+#     sum += digit
+#     integer = integer // 10
+#
+# print(sum)
 
 
 # Task5. Напишите программу для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
@@ -71,7 +82,41 @@
 # юзаем библиотеки random и time
 # предикаты НЕ ЗАДАЕМ как целое число!
 
-
+# import random
+# import time
+#
+# start = time.time()
+#
+# i = 1
+#
+# while i <= 100:
+#
+#     n = int(random.randint(3, 15))
+#     def inputNumbers(x):
+#         xyz = ["X", "Y", "Z"]
+#         a = []
+#         for i in range(x):
+#             a.append(bool(random.choice([True, False])))
+#         return a
+#
+#     def checkPredicate(x):
+#         left = not (x[0] or x[1] or x[2])
+#         right = not x[0] and not x[1] and not x[2]
+#         result = left == right
+#         return result
+#
+#     statement = inputNumbers(n)
+#
+#     if checkPredicate(statement) == True:
+#         print(f"Утверждение истинно")
+#     else:
+#         print(f"Утверждение ложно")
+#
+#     i += 1
+#
+# end = time.time() - start
+#
+# print(f"\n{end}")
 
 # Task6. Валентина прогуляла лекцию по математике.
 # Преподаватель решил подшутить над нерадивой студенткой и
@@ -86,4 +131,14 @@
 # Постарайтесь найти самое оптимальное решение.
 # Результат представьте в виде списка (не забудьте отсортировать по возрастанию).
 
-
+# def all_divisors(number):
+#
+#     sp = [1, number]
+#     for i in range(2, 1 + int(number ** 0.5)):
+#         if number % i == 0:
+#             sp.extend({number // i, i})
+#     return sorted(sp)
+#
+# print(all_divisors(23436))
+# print(all_divisors(190187200))
+# print(all_divisors(380457890232))
