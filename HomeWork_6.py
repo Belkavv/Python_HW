@@ -19,16 +19,16 @@
 # меньше заданного минимума и не больше заданного
 # максимума)
 
-# def Index(list, min, max):
-#     list_1 = []
-#     for i in range(len(list)):
-#         if list[i] >= min and list[i] <= max:
-#             list_1.append(i)
-#     return list_1
-#
-# min = int(input("Введите минимальное число: "))
-# max = int(input("Введите максимальное число: "))
-#
-# list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
-#
-# print(Index(list_1, min, max))
+def Index(list, min, max):
+    list_1 = []
+    for i in range(len(list)):
+        if list[i] >= min and list[i] <= max:
+            list_1.append(i)
+    return list_1
+
+min = int(input("Введите минимальное число: "))
+max = int(input("Введите максимальное число: "))
+
+list_1 = [ 1, 5, 88, 100, 2, -4]
+
+print(Index(list_1, min, max))
